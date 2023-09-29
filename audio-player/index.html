@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Audio Player</title>
+   <link rel="icon" href="./favicon/favicon.ico">
+   <link rel="stylesheet" href="./css/normalize.css">
+   <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+   <img src="./img/background/img_1.jpg" alt="img" class="main-background">
+   <audio src="./music/auslander.mp3" id="audio"></audio>
+
+   <div class="player">
+      <div class="player__img">
+         <img src="./img/background/img_1.jpg" class="img">
+      </div>
+      <div class="player__content content">
+         <div class="content__top top">
+            <div class="top__about-song">
+               <h2 class="top__song-artist">rammstein</h2>
+               <h2 class="top__song-title">auslander</h2>
+            </div>
+            <div class="top__buttons">
+               <img src="./img/button/backbutton.png" class="previousSong">
+               <img src="./img/button/playbutton.png" class="playPause">
+               <img src="./img/button/nextbutton.png" class="nextSong">
+            </div>
+         </div>
+         <div class="content__buttom buttom">
+
+            <div class="progress__line">
+               <div class="progress__current"></div>
+            </div>
+
+            <div class="buttom__time-line time-line">
+               <div class="time-line-start">0:00</div>
+               <div class="time-line-end">0:00</div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+   <footer class="footer">
+      <div class="footer__wrapper">
+         <ul class="link__team">
+            <li class="link__item"> <a href="https://rs.school/js-stage0/"><img class="rss-img"
+                     src="./icon/rs_school_js.svg" alt=""></a></li>
+            <li class="link__item">2023</li>
+            <li class="link__item"><a href="https://github.com/AndreyVlasov89">Vlasov Andrey</a></li>
+         </ul>
+      </div>
+   </footer>
+   <script src="./js/index.js"></script>
+</body>
+
+</html>
