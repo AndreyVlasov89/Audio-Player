@@ -1,0 +1,185 @@
+@font-face {
+   font-display: swap;
+   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+   font-family: 'Belanosima';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../fonts/belanosima-v3-latin-regular.woff2') format('woff2');
+   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-regular - latin */
+@font-face {
+   font-display: swap;
+   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2');
+   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Belanosima','Roboto', sans-serif;
+   font-style: normal;
+   font-size: 23px;
+   line-height: 130%;
+   font-weight: 400;
+   letter-spacing: 1.5px;
+   
+}
+
+.main-background {
+   width: 100%;
+   height: 100vh;
+   filter: blur(10px);
+   z-index: -1;
+}
+
+.player {
+   position: absolute;
+   width: 450px;
+   height: 480px;
+   background: #00B868;
+   border: 2px solid #00B868;
+   border-radius: 10px;
+   overflow: hidden;
+   z-index: 10;
+   box-shadow: 0px 0px 10px #fff;
+   filter: blur(0px);
+
+   .player__img img {
+      width: 100%;
+      height: 267px;
+      box-shadow: 0px 5px 20px #454b49;
+      transition: all .3s ease;
+   }
+   
+   .content {
+      padding: 10% 5% 5% 5%;
+   }
+   
+   .content__top {
+      margin-bottom: 10%;
+   }
+   
+   .top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+   }
+   
+   .top__about-song {
+      width: 40%;
+   }
+   
+   .top__song-artist {
+      transition: all .3s ease;
+      &::selection {
+         background: #fc8c9e;
+      }
+   }
+   
+   .top__song-title {
+      color: #fff;
+      text-transform: capitalize;
+      transition: all .3s ease;
+      &::selection {
+         background: #fc8c9e;
+      }
+   }
+   
+   .top__buttons {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   
+   .top__buttons img {
+      cursor: pointer;
+      filter: invert(1);
+      transition: all .3s ease;
+      &:hover {
+         opacity: 0.7;
+      }
+   }
+   
+   .progress__line {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 10px;
+      background: #fff;
+      border-radius: 5px;
+      padding: 2px;
+      cursor: pointer;
+   
+      .progress__current {
+         //width: 20%;
+         height: 6px;
+         background: #ff0f9b;
+         border-radius: 5px;
+      }
+   } 
+   
+   //.buttom__time-line {}
+   
+   .time-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 15px;
+
+      .time-line-start {
+         &::selection {
+               background: #fc8c9e;
+            }
+      }
+      
+      .time-line-end {
+         &::selection {
+               background: #fc8c9e;
+            }
+      }
+   }
+}
+
+.footer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   padding: 10px 20px;
+   background: #03864d;
+   margin-top: -50px;
+   .footer__wrapper {
+      width: 70%;
+      .link__team {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+            .link__item {
+               &::selection {
+                     background: #fc8c9e;
+                  }
+            }
+            .link__item a {
+               color: #000;
+               &::selection {
+                     background: #fc8c9e;
+                  }
+               }
+               .rss-img {
+                  width: 80px;
+               }
+      }
+   }             
+}
+
